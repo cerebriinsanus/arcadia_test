@@ -1,0 +1,16 @@
+App\Entity\Question:
+    properties:
+        text:
+            - NotBlank: ~
+        createdAt:
+            - NotBlank: ~
+            - Type: DateTimeInterface
+        choices:
+            - Count:
+                min: 2
+            - Valid: ~
+
+App\Entity\Choice:
+    properties:
+        text:
+            - NotBlank: ~
